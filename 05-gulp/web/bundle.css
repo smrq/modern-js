@@ -1,0 +1,56 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+.color-text {
+  width: 300px;
+  font-size: 60px;
+  text-align: center;
+  line-height: 300px;
+  opacity: 0.2;
+}
+.tile-1 {
+  background-color: #bf72ad;
+  width: 300px;
+  height: 300px;
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+.tile-1:hover {
+  background-color: #d7a7cc;
+}
+.tile-1:hover > .color-text {
+  opacity: 0.6;
+}
+.tile-2 {
+  background-color: #bf9072;
+  width: 300px;
+  height: 300px;
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+.tile-2:hover {
+  background-color: #d7b9a7;
+}
+.tile-2:hover > .color-text {
+  opacity: 0.6;
+}
+.tile-3 {
+  background-color: #72afbf;
+  width: 300px;
+  height: 300px;
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+.tile-3:hover {
+  background-color: #a7cdd7;
+}
+.tile-3:hover > .color-text {
+  opacity: 0.6;
+}

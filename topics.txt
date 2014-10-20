@@ -1,0 +1,49 @@
+Node.js / npm
+Bower
+Gulp
+	Livereload
+	Code coverage w/Istanbul
+Browserify
+	brfs
+	varlessify
+	npm modules
+TypeScript
+
+
+- Talk about Node.js: a little background, history
+- Show a Node.js REPL
+	1+1
+	"abc"+1
+	"abc"-1
+- Something that would never work in a browser
+	hello world with fs
+
+- Cool, but how does this help us web developers?
+- Build systems!
+
+Browserify
+- The situation:
+	- Dozens and dozens of *.js files
+	- Potentially complex dependencies between files
+	- Everything sticks stuff on window
+- For the Angular-savvy
+	- DI solves a lot of this
+	- Code is only reusable within Angular apps
+	- Magic strings only resolved at runtime
+- Browserify elegantly handles file concatenation along with dependency resolution
+	- Robot therapist in Node
+	- Browserify build.js
+	- Run server.js (don't have to explain this)
+	- Robot therapist in the browser
+- Browserify gets you more than just local module resolution
+	- Resolve modules from npm
+	- Even resolve some modules from the Node runtime
+	- hello world with brfs
+- Write your own source transformations!
+	- varlessify
+
+Gulp
+- Build script is starting to get unwieldy and it doesn't even do much yet
+- Convert to gulpfile
+- Add minification, server
+- Split apart
