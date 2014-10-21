@@ -1,0 +1,10 @@
+<ul>
+	<% for (var i=0; i<datasets.length; i++) { %>
+	<li style="color: <%= datasets[i].fillColor %>">
+		<span class="ds-chart-legend-icon" style="background-color: <%= datasets[i].fillColor %>"></span>
+		<% if (datasets[i].label) { %>
+		<%= datasets[i].label %>
+		<% } %>
+	</li>
+	<% } %>
+</ul>

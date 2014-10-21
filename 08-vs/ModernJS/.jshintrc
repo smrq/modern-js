@@ -1,0 +1,12 @@
+{
+	"browser": true,
+	"devel": true,
+	"eqeqeq": true,
+	"eqnull": true,
+	"jquery": true,
+	"node": true,
+	"predef": [ "require", "module" ],
+	"quotmark": "single",
+	"undef": true,
+	"unused": true
+}

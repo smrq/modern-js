@@ -2,55 +2,74 @@
 body {
   font-family: 'Open Sans', sans-serif;
 }
-.color-text {
-  width: 300px;
-  font-size: 60px;
-  text-align: center;
-  line-height: 300px;
-  opacity: 0.2;
+.body-content {
+  margin-left: 20px;
+  margin-right: 20px;
 }
-.tile-1 {
-  background-color: #bf72ad;
-  width: 300px;
-  height: 300px;
+h1 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 35px;
+}
+canvas.chart {
   float: left;
-  margin-right: 30px;
-  margin-bottom: 30px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 }
-.tile-1:hover {
-  background-color: #d7a7cc;
-}
-.tile-1:hover > .color-text {
-  opacity: 0.6;
-}
-.tile-2 {
-  background-color: #bf9072;
-  width: 300px;
-  height: 300px;
+.legend {
   float: left;
-  margin-right: 30px;
-  margin-bottom: 30px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  margin-top: 100px;
+  margin-left: 20px;
 }
-.tile-2:hover {
-  background-color: #d7b9a7;
+.legend-dsi {
+  position: relative;
+  padding-left: 28px;
+  color: #00467f;
+  font-weight: bold;
+  line-height: 24px;
+  margin-bottom: 3px;
 }
-.tile-2:hover > .color-text {
-  opacity: 0.6;
+.legend-dsi::before {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  border-radius: 2px;
+  background-color: #00467f;
+  width: 20px;
+  height: 20px;
+  content: " ";
 }
-.tile-3 {
-  background-color: #72afbf;
-  width: 300px;
-  height: 300px;
-  float: left;
-  margin-right: 30px;
-  margin-bottom: 30px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+.legend-tels {
+  position: relative;
+  padding-left: 28px;
+  color: #b81237;
+  font-weight: bold;
+  line-height: 24px;
+  margin-bottom: 3px;
 }
-.tile-3:hover {
-  background-color: #a7cdd7;
+.legend-tels::before {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  border-radius: 2px;
+  background-color: #b81237;
+  width: 20px;
+  height: 20px;
+  content: " ";
 }
-.tile-3:hover > .color-text {
-  opacity: 0.6;
+.legend-dssi {
+  position: relative;
+  padding-left: 28px;
+  color: #ea6721;
+  font-weight: bold;
+  line-height: 24px;
+  margin-bottom: 3px;
+}
+.legend-dssi::before {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  border-radius: 2px;
+  background-color: #ea6721;
+  width: 20px;
+  height: 20px;
+  content: " ";
 }

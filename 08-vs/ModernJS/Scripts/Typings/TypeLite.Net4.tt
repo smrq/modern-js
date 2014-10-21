@@ -1,0 +1,65 @@
+﻿<#@ template debug="false" hostspecific="True" language="C#"
+#><#@ assembly name="$(SolutionDir)\packages\TypeLite.0.9.2.0\lib\net4\TypeLite.dll"
+#><#@ assembly name="$(SolutionDir)\packages\TypeLite.0.9.2.0\lib\net4\TypeLite.Net4.dll"
+#><#@ assembly name="$(TargetDir)$(TargetFileName)"
+#><#@ import namespace="System.Text.RegularExpressions"
+#><#@ import namespace="TypeLite"
+#><#@ import namespace="TypeLite.TsModels"
+#><#@ import namespace="TypeLite.Net4"
+#><#@ output extension=".d.ts"
+#><#@ include file="Manager.ttinclude"
+#><# var manager = Manager.Create(Host, GenerationEnvironment);
+#><#
+	var ts = TypeScript.Definitions()
+		.ForLoadedAssemblies()
+		.WithFormatter(formatType)
+		.WithFormatter(formatModule)
+		.WithFormatter(formatMemberType)
+		.WithFormatter(formatMemberIdentifier);
+#><#= ts.Generate()
+#><# manager.EndBlock();
+#><# manager.Process(true);
+#><#+
+	private string toCamelCase(string name)
+	{
+		return string.Join(".", name.Split('.').Select(token => char.ToLowerInvariant(token[0]) + token.Substring(1)));
+	}
+
+	private string formatType(TsType type, ITsTypeFormatter f)
+	{
+		var typeName = ((TsClass)type).Name;
+		typeName = Regex.Replace(typeName, "_", string.Empty);
+		typeName = Regex.Replace(typeName, "Model$", string.Empty);
+		return "I" + typeName;
+	}
+
+	private string formatModule(string moduleName)
+	{
+		if (moduleName.StartsWith(@"ModernJS.Models")) {
+			moduleName = Regex.Replace(moduleName, @"^ModernJS.Models", string.Empty);
+			if (moduleName == string.Empty)
+				moduleName = ".common";
+			moduleName = "ds.symposium" + moduleName + ".models";
+		}
+		return toCamelCase(moduleName);
+	}
+
+	private string formatMemberType(string typeName, bool isTypeCollection)
+	{
+		if (isTypeCollection)
+			typeName = typeName + "[]";
+
+		var tokens = typeName.Split('.').ToList();
+		if (tokens.Count == 1)
+			return typeName;
+
+		var moduleName = tokens.GetRange(0, tokens.Count - 1);
+		typeName = tokens.Last();
+		return formatModule(string.Join(".", moduleName)) + "." + typeName;
+	}
+
+	private string formatMemberIdentifier(IMemberIdentifier identifier)
+	{
+		return toCamelCase(identifier.Name);
+	}
+#>

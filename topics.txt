@@ -39,11 +39,14 @@ Browserify
 	- Resolve modules from npm
 	- Even resolve some modules from the Node runtime
 	- hello world with brfs
+	- ChartJs from Bower
 - Write your own source transformations!
 	- varlessify
 
 Gulp
 - Build script is starting to get unwieldy and it doesn't even do much yet
 - Convert to gulpfile
-- Add minification, server
+- Add minification, server, watch, livereload
 - Split apart
+
+TypeScript

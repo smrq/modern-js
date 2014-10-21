@@ -1,0 +1,61 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+.body-content {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+h1 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 35px;
+}
+.ds-chart {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.canvas-wrapper {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 500px;
+  height: 300px;
+}
+.ds-chart-legend-wrapper {
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2;
+  margin-top: 100px;
+  margin-left: 20px;
+}
+.ds-chart-legend ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.ds-chart-legend li {
+  position: relative;
+  padding-left: 28px;
+  font-weight: bold;
+  line-height: 24px;
+  margin-bottom: 3px;
+}
+.ds-chart-legend .ds-chart-legend-icon {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  content: " ";
+}

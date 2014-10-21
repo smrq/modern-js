@@ -8,15 +8,16 @@ gulp.task('default', ['scripts', 'styles']);
 
 gulp.task('scripts', function () {
 	var bundler = browserify();
-	bundler.add('./colors.js')
-		.transform('varlessify', { file: './colors.less' })
+	bundler.add('./src/colors.js')
+		.transform('browserify-shim')
+		.transform('varlessify', { file: './src/colors.less' })
 		.bundle()
 		.pipe(source('bundle.js'))
 		.pipe(gulp.dest('./web'));
 });
 
 gulp.task('styles', function () {
-	gulp.src('./colors.less')
+	gulp.src('./src/colors.less')
 		.pipe(less())
 		.pipe(gulp.dest('./web'));
 });

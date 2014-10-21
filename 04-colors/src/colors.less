@@ -1,0 +1,50 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+@color-dsi: rgb( 0, 70, 127 );
+@color-tels: rgb( 184, 18, 55 );
+@color-dssi: rgb( 234, 103, 33 );
+
+body { font-family: 'Open Sans', sans-serif; }
+
+.body-content {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+h1 {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+	margin-bottom: 35px;
+}
+
+canvas.chart { float: left; }
+
+.legend-item(@color) {
+	position: relative;
+	padding-left: 28px;
+	color: @color;
+	font-weight: bold;
+	line-height: 24px;
+	margin-bottom: 3px;
+
+	&::before {
+		position: absolute;
+		left: 0;
+		top: 2px;
+		border-radius: 2px;
+		background-color: @color;
+		width: 20px;
+		height: 20px;
+		content: " ";
+	}
+}
+
+.legend {
+	float: left;
+	margin-top: 100px;
+	margin-left: 20px;
+}
+
+.legend-dsi { .legend-item(@color-dsi); }
+.legend-tels { .legend-item(@color-tels); }
+.legend-dssi { .legend-item(@color-dssi); }

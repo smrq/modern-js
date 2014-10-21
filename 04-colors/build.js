@@ -4,14 +4,15 @@ var less = require('less');
 
 function buildScripts() {
 	var bundler = browserify();
-	bundler.add('./colors.js')
-		.transform('varlessify', { file: './colors.less' })
+	bundler.add('./src/colors.js')
+		.transform('browserify-shim')
+		.transform('varlessify', { file: './src/colors.less' })
 		.bundle()
-		.pipe(fs.createWriteStream('./web/bundle.js'));	
+		.pipe(fs.createWriteStream('./web/bundle.js'));
 }
 
 function buildStyles() {
-	less.render(fs.readFileSync('./colors.less', 'utf-8'), function (e, css) {
+	less.render(fs.readFileSync('./src/colors.less', 'utf-8'), function (e, css) {
 		fs.writeFileSync('./web/bundle.css', css);
 	});
 }
