@@ -1,4 +1,4 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"./Scripts/Source/index.ts":[function(require,module,exports){
 var angular = require('angular');
 var angularRoute = require('angular-route');
 
@@ -19,7 +19,7 @@ angular.module('ds.symposium', [angularRoute.name]).controller('brandishnessCont
 });
 
 
-},{"./brandishnessController":2,"./dsChart/dsChart":3,"./homeService":4,"angular":6,"angular-route":5}],2:[function(require,module,exports){
+},{"./brandishnessController":"c:\\Code\\modern-js\\08-vs\\ModernJS\\Scripts\\Source\\brandishnessController.ts","./dsChart/dsChart":"c:\\Code\\modern-js\\08-vs\\ModernJS\\Scripts\\Source\\dsChart\\dsChart.ts","./homeService":"c:\\Code\\modern-js\\08-vs\\ModernJS\\Scripts\\Source\\homeService.ts","angular":"c:\\Code\\modern-js\\bower_components\\angular\\angular.js","angular-route":"c:\\Code\\modern-js\\bower_components\\angular-route\\angular-route.js"}],"c:\\Code\\modern-js\\08-vs\\ModernJS\\Scripts\\Source\\brandishnessController.ts":[function(require,module,exports){
 
 
 var BrandishnessController = (function () {
@@ -54,7 +54,7 @@ var BrandishnessController = (function () {
 module.exports = BrandishnessController;
 
 
-},{}],3:[function(require,module,exports){
+},{}],"c:\\Code\\modern-js\\08-vs\\ModernJS\\Scripts\\Source\\dsChart\\dsChart.ts":[function(require,module,exports){
 
 var _ = require('lodash');
 var Chart = require('chartjs');
@@ -176,7 +176,7 @@ function chartTypeToClass(chartType) {
 }
 
 
-},{"chartjs":7,"lodash":9}],4:[function(require,module,exports){
+},{"chartjs":"c:\\Code\\modern-js\\bower_components\\chartjs\\Chart.js","lodash":"c:\\Code\\modern-js\\bower_components\\lodash\\dist\\lodash.js"}],"c:\\Code\\modern-js\\08-vs\\ModernJS\\Scripts\\Source\\homeService.ts":[function(require,module,exports){
 var HomeService = (function () {
     function HomeService($http) {
         this.$http = $http;
@@ -192,7 +192,7 @@ var HomeService = (function () {
 module.exports = HomeService;
 
 
-},{}],5:[function(require,module,exports){
+},{}],"c:\\Code\\modern-js\\bower_components\\angular-route\\angular-route.js":[function(require,module,exports){
 (function (global){
 
 ; require("c:\\Code\\modern-js\\bower_components\\angular\\angular.js");
@@ -1181,7 +1181,7 @@ function ngViewFillContentFactory($compile, $controller, $route) {
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"c:\\Code\\modern-js\\bower_components\\angular\\angular.js":6}],6:[function(require,module,exports){
+},{"c:\\Code\\modern-js\\bower_components\\angular\\angular.js":"c:\\Code\\modern-js\\bower_components\\angular\\angular.js"}],"c:\\Code\\modern-js\\bower_components\\angular\\angular.js":[function(require,module,exports){
 (function (global){
 
 ; require("c:\\Code\\modern-js\\bower_components\\jquery\\dist\\jquery.js");
@@ -26775,7 +26775,7 @@ var styleDirective = valueFn({
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"c:\\Code\\modern-js\\bower_components\\jquery\\dist\\jquery.js":8}],7:[function(require,module,exports){
+},{"c:\\Code\\modern-js\\bower_components\\jquery\\dist\\jquery.js":"c:\\Code\\modern-js\\bower_components\\jquery\\dist\\jquery.js"}],"c:\\Code\\modern-js\\bower_components\\chartjs\\Chart.js":[function(require,module,exports){
 (function (global){
 ;__browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*!
@@ -30162,7 +30162,7 @@ var styleDirective = valueFn({
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],8:[function(require,module,exports){
+},{}],"c:\\Code\\modern-js\\bower_components\\jquery\\dist\\jquery.js":[function(require,module,exports){
 (function (global){
 ;__browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*!
@@ -39361,7 +39361,7 @@ return jQuery;
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],9:[function(require,module,exports){
+},{}],"c:\\Code\\modern-js\\bower_components\\lodash\\dist\\lodash.js":[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -46150,4 +46150,4 @@ return jQuery;
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}]},{},[1]);
+},{}]},{},["./Scripts/Source/index.ts"]);
