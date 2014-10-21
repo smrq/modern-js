@@ -2,13 +2,13 @@
 import common = ds.symposium.common;
 
 class BrandishnessController {
-	constructor($scope: any, data: common.models.IBrandishness[]) {
-		var datasets: chart.IBarChartDataset[] = data.map((datum: common.models.IBrandishness) => ({
+	constructor($scope: common.controllers.IBrandishnessScope, data: common.models.IBrandishness[]) {
+		var datasets = data.map((datum: common.models.IBrandishness) => ({
 			label: datum.name,
 			fillColor: this.brandColorToRgbColor(datum.brandColor),
 			data: [datum.brandishness]
 		}));
-		var chartData: chart.IBarChartData = {
+		var chartData = {
 			labels: ['Brandishness'],
 			datasets: datasets
 		};

@@ -1,7 +1,7 @@
-﻿import varless = require('varless');
-import Chart = require('chartjs');
-import angular = require('angular');
+﻿import angular = require('angular');
 import angularRoute = require('angular-route');
+import Chart = require('chartjs');
+import varless = require('varless');
 
 import brandishnessController = require('./brandishnessController');
 import dsChart = require('./dsChart/dsChart');
