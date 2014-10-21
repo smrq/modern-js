@@ -2,6 +2,7 @@
 import common = ds.symposium.common;
 
 class BrandishnessController {
+	/*@ngInject*/
 	constructor($scope: common.controllers.IBrandishnessScope, data: common.models.IBrandishness[]) {
 		var datasets = data.map((datum: common.models.IBrandishness) => ({
 			label: datum.name,

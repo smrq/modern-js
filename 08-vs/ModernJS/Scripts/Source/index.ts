@@ -13,12 +13,16 @@ angular.module('ds.symposium', [angularRoute.name])
 	.controller('brandishnessController', brandishnessController)
 	.directive('dsChart', dsChart.dsChart)
 	.service('homeService', homeService)
-	.config(($routeProvider: ng.route.IRouteProvider) => {
-		$routeProvider.when('/', {
-			templateUrl: '/Views/Brandishness',
-			controller: 'brandishnessController',
-			resolve: {
-				data: (homeService: common.services.IHomeService) => homeService.getBrandishness()
-			}
-		});
-});
+	.config(routeConfig);
+
+/*@ngInject*/
+function routeConfig($routeProvider: ng.route.IRouteProvider) {
+	$routeProvider.when('/', {
+		templateUrl: '/Views/Brandishness',
+		controller: 'brandishnessController',
+		resolve: {
+			data: /*@ngInject*/
+				(homeService: common.services.IHomeService) => homeService.getBrandishness()
+		}
+	});
+}

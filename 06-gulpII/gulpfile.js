@@ -41,7 +41,7 @@ gulp.task('scripts', function () {
 gulp.task('styles', function () {
 	gulp.src('./src/colors.less')
 		.pipe(less())
-		.pipe(autoprefixer())
+		.pipe(autoprefixer(['>1%', 'last 2 versions', 'ie9']))
 		.pipe(gulpif(release, csso()))
 		.pipe(rename('bundle.css'))
 		.pipe(gulp.dest('./web'));

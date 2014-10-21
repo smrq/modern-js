@@ -3,6 +3,7 @@ var buffer = require('vinyl-buffer');
 var gulp = require('gulp');
 var gulpif = require('gulp-if');
 var gutil = require('gulp-util');
+var ngAnnotate = require('gulp-ng-annotate');
 var source = require('vinyl-source-stream');
 var uglify = require('gulp-uglify');
 var watchify = require('watchify');
@@ -26,6 +27,7 @@ gulp.task('scripts-watch', function () {
 		return bundler.bundle()
 			.pipe(source('bundle.js'))
 			.pipe(buffer())
+			.pipe(gulpif(release, ngAnnotate()))
 			.pipe(gulpif(release, uglify()))
 			.pipe(gulp.dest('./Content'));
 	}
