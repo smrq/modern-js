@@ -12,9 +12,10 @@ function buildScripts() {
 }
 
 function buildStyles() {
-	less.render(fs.readFileSync('./src/colors.less', 'utf-8'), function (e, css) {
-		fs.writeFileSync('./web/bundle.css', css);
-	});
+	less.render(fs.readFileSync('./src/colors.less', 'utf-8'),
+		function (e, css) {
+			fs.writeFileSync('./web/bundle.css', css);
+		});
 }
 
 buildScripts();

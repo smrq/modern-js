@@ -14,8 +14,7 @@ gulp.task('scripts', function () {
 		.transform('browserify-shim')
 		.transform('varlessify', { file: './src/variables.less' })
 		.bundle()
-		.pipe(source('bundle.js'))
-		.pipe(buffer())
+		.pipe(source('bundle.js')).pipe(buffer())
 		.pipe(gulpif(release, uglify()))
 		.pipe(gulp.dest('./web'));
 });

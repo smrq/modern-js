@@ -3,10 +3,8 @@ var livereload = require('gulp-livereload');
 var watch = require('gulp-watch');
 
 gulp.task('watch', ['scripts-watch'], function () {
-	var lr = livereload();
-	gulp.watch('./web/**', {debounceDelay: 3000}).on('change', function (file) {
-		lr.changed(file.path);
-	});
+	livereload.listen();
+	gulp.watch('./web/**').on('change', livereload.changed);
 	watch('./src/*.js', function (files, cb) {
 		gulp.start('lint', cb);
 	});

@@ -23,7 +23,7 @@ var barChart = new Chart(ctx).Bar(data, {
 	barShowStroke: false
 });
 
-},{"chartjs":"c:\\Code\\modern-js\\bower_components\\chartjs\\Chart.js"}],"c:\\Code\\modern-js\\bower_components\\chartjs\\Chart.js":[function(require,module,exports){
+},{"chartjs":"/Users/gregsm/code/modern-js/bower_components/chartjs/Chart.js"}],"/Users/gregsm/code/modern-js/bower_components/chartjs/Chart.js":[function(require,module,exports){
 (function (global){
 ;__browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*!
